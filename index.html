@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&amp;family=Poppins:wght@100;200;300;400;500;600;700&amp;display=swap"
+          rel="stylesheet">
+     <link rel="stylesheet" href="src/style.css">
+     <title>Anjana Madu</title>
+     <link rel="icon" href="https://avatars.githubusercontent.com/u/86356062?v=4" type="image/x-icon">
+</head>
+
+<body id="body" class="dark">
+     <div class="wrapper">
+          <div class="toggle">
+               <input class="toggle-input" type="checkbox" />
+               <div class="toggle-bg"></div>
+               <div class="toggle-switch">
+                    <div class="toggle-switch-figure"></div>
+                    <div class="toggle-switch-figureAlt"></div>
+               </div>
+          </div>
+     </div>
+     <div class="modal">
+          <img src="https://avatars.githubusercontent.com/u/86356062?v=4" alt="">
+          <div class="close"></div>
+     </div>
+
+     <div id="container" class="container">
+          <input type="checkbox" name="" id="check">
+          <div class="card">
+               <div class="sidebar" id="sidebar">
+                    <ul>
+                         <li><a class="active" target="_blank" href="https://github.com/AnjanaMadu">Github</a></li>
+                         <li><a class="active" target="_blank" href="https://youtube.com/c/AnjanaMaduu">YouTube</a></li>
+                         <li><a class="active" href="tg://resolve?domain=Anjana_Ma">Telegram</a></li>
+                    </ul>
+               </div>
+               <div class="header">
+                    <label for="check" class="checkbtn" id="chkbtn">
+                         <div class="hamburger-menu">
+                              <div class="center"></div>
+                         </div>
+                    </label>
+                    <a href="mailto:admin@gmail.com" class="mail">
+                         <i class="far fa-envelope"></i>
+                    </a>
+                    <div class="main">
+                         <div class="image">
+                              <div class="hover">
+                                   <i class="fas fa-camera fa-2x"></i>
+                              </div>
+                         </div>
+                         <h3 class="name">Anjana Madu</h3>
+                         <h3 class="sub-name">@AnjanaMadu</h3>
+                    </div>
+               </div>
+
+               <div class="content">
+                    <div class="left">
+                         <div class="about-container">
+                              <h3 class="title">About</h3>
+                              <p class="text">
+                                   Noob Coder. • Python | JS | PHP 💖
+                                   <br>
+                                   Github has <span id="followers_count"></span> followers.
+                              </p>
+                         </div>
+                         <div class="icons-container">
+                              <a href="https://github.com/AnjanaMadu" class="icon" target="_blank">
+                                   <i class="fab fa-github"></i>
+                              </a>
+                              <a href="tg://resolve?domain=Anjana_Ma" class="icon">
+                                   <i class="fab fa-telegram"></i>
+                              </a>
+                              <a href="https://youtube.com/c/AnjanaMaduu" class="icon" target="_blank">
+                                   <i class="fab fa-youtube"></i>
+                              </a>
+                              <a href="https://twitter.com/Anjana__Madu" class="icon" target="_blank">
+                                   <i class="fab fa-twitter"></i>
+                              </a>
+                              <a href="https://ko-fi.com/AnjanaMadu" class="icon" target="_blank">
+                                   <i class="fa fa-coffee" aria-hidden="true"></i>
+                              </a>
+                         </div>
+                         <div class="buttons-wrap">
+                              <div class="follow-wrap">
+                                   <a href="https://github.com/AnjanaMadu" class="follow" target="_blank">Follow</a>
+                              </div>
+                              <div class="share-wrap">
+                                   <a href="tg://resolve?domain=harp_tech" class="share">More</a>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <script src="https://cdn.jsdelivr.net/gh/cachecleanerjeet/contact-form@master/src/contact-form.min.js"
+          id="contactform" form_worker_url="https://contactform.harp.workers.dev/"></script>
+     <script src="src/app.js"></script>
+     <script type="text/javascript">
+          var followers = document.getElementById("followers_count");
+          var data = fetch("https://api.github.com/users/AnjanaMadu")
+               .then(response => response.json())
+               .then(data => {
+                    followers.innerHTML = data.followers;
+               })
+     </script>
+</body>
+
+</html>
